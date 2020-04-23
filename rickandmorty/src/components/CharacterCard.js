@@ -1,6 +1,9 @@
 import React from 'react';
 
 const CharacterCard = ( props ) =>{
+    const ranDeg = () => {
+        return Math.floor(Math.random() * 60)
+    }
     const imgStyle = {
         background: `url(${props.character.image }) no-repeat`
     }
@@ -10,7 +13,7 @@ const CharacterCard = ( props ) =>{
             <div className="card-container">
                 <div className="card-image" style={imgStyle}>
                     <div className={( props.character.status === "Dead") ? "dead" : "not-dead"}>
-                        <h1>DEAD</h1>
+                        <h1 style={{  transform: `rotate(${ranDeg()-25}deg)`}}>DEAD</h1>
                     </div>
                     <div className="card-name">
                         <h2>{props.character.name}</h2>
@@ -28,10 +31,13 @@ const CharacterCard = ( props ) =>{
                             <span>Origin</span>
                             <p>{props.character.origin.name}</p>
                         </div>
+                        
+ {/*                       last known location
                         <div className="txt-wrapper">
                             <span>Last Location</span>
                             <p>{props.character.location.name}</p>
                         </div>
+    */}
                     </div>
                 </div>
             </div>
