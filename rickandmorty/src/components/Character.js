@@ -26,7 +26,6 @@ const Character = () => {
       })
       .catch((error) => console.log("Error!", error));
   }, [page]);
-  console.log(info.prev)
   return (
     <div className="holder">
         <div className="header-container">
