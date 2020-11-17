@@ -12,23 +12,44 @@ body {
   font-family: sans-serif;
 }
 button {
-  padding: 15px;
+  padding: 5px;
+  margin: 10px;
   font-size: 2rem;
   border-radius: 15px;
+}
+button:hover {
+  background-color: #999;
 }
 .page {
   padding: 10px;
   font-size: 2rem;
   color: #bfe2e4;
-  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 3px;
+}
+.header-container {
+  position: fixed;
+  z-index: 2;
+  top:0;
+  right:0;
+  left:0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.Header {
+  color: #c8cbd6;
+  background-color: #333c;
+  margin-top: 0;
+  padding: 10px;
+  text-shadow: 1px 1px 5px #222;
 }
 .nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+
+
 }
 .card-grid {
+  margin-top: 200px;
   display: grid;
   gap: 15px;
   grid-template-columns: repeat(4, 1fr);

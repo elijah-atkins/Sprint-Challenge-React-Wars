@@ -13,7 +13,6 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Rick and Morty Characters</h1>
 
       <Character />
 
