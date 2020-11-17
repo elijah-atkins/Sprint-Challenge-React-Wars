@@ -32,7 +32,7 @@ const Character = () => {
       <h1 className="Header">Rick and Morty Characters</h1>
 
       <div className="nav">
-        {info.prev !== null && (
+        {info.prev !== null ? (
           <button
             onClick={() => {
               setPage(info.prev);
@@ -40,11 +40,11 @@ const Character = () => {
           >
             Previous
           </button>
-        )}
+        ): <div>{" "}</div>}
         <p className="page">
           {getPageNumber(page)} of {info.pages}
         </p>
-        {info.next !== null && (
+        {info.next !== null ?(
           <button
             onClick={() => {
               setPage(info.next);
@@ -52,7 +52,7 @@ const Character = () => {
           >
             Next
           </button>
-        )}
+        ):<div>{" "}</div>}
       </div>
       </div>
       <div className="card-grid">
